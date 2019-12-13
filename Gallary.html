@@ -1,0 +1,152 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/Css" Href="/Gallary.Css">
+</Head>
+<img ID="logo" src="Images/LogoB.png">
+<h1>
+</h1>
+<Body>
+
+<ul>
+  <li><a href="Home.html"><img src="Images\icons\Home.png" alt= "Home" width="35" height="35"></a></li>
+  <li><a href="Media.html"><img src="\Images\icons\Socal Media.png" alt= "Social" width="35" height="35"></a></li>
+  <li><a href="About.HTML"><img src="\Images\icons\About.png" alt= "About" width="35" height="35"></a></li>
+  <li><a href="Gallary.html"><img src="\Images\icons\Gallary.png" alt="Gallary" width="35" height="35"></a></li> 
+</ul>
+
+<div ID="Centralblock">
+
+<h2> 
+
+<br>
+Gallery
+</h2> 
+<body2>
+
+<script type="text/javascript">
+theimage = new Array();
+
+
+theimage[0]=["Images/Gallery/long/Image 111.png", "", ""];
+theimage[1]=["Images/Gallery/long/Image 2.jpg", "", ""];
+theimage[2]=["Images/Gallery/long/Image 3.jpg", "", ""];
+theimage[3]=["Images/Gallery/long/Image 4.jpg", "", ""];
+theimage[4]=["Images/Gallery/long/Image 5.jpg", "", ""];
+theimage[5]=["Images/Gallery/long/Image 6.jpg", "", ""];
+theimage[6]=["Images/Gallery/long/Image 7.jpg", "", ""];
+theimage[7]=["Images/Gallery/long/Image 10.jpg", "", ""];
+theimage[8]=["Images/Gallery/long/Image 11.jpg", "", ""];
+theimage[9]=["Images/Gallery/Image 1.jpg", "", ""];
+theimage[10]=["Images/Gallery/Image 2.jpg", "", ""];
+theimage[11]=["Images/Gallery/Image 3.jpg", "", ""];
+theimage[12]=["Images/Gallery/Image 4.jpg", "", ""];
+theimage[13]=["Images/Gallery/Image 5.jpg", "", ""];
+theimage[14]=["Images/Gallery/Image 6.jpg", "", ""];
+theimage[15]=["Images/Gallery/Image 7.jpg", "", ""];
+theimage[16]=["Images/Gallery/Image 8.jpg", "", ""];
+
+playspeed=5000;
+i=0;
+
+
+window.onload=function(){
+
+	
+	preloadSlide();
+
+	
+	SetSlide(0);
+
+}
+
+
+function SetSlide(num) {
+	i=num%theimage.length;
+	if(i<0)i=theimage.length-1;
+	document.images.imgslide.src=theimage[i][0];
+	document.getElementById('slidebox').innerHTML=theimage[i][2];
+	document.getElementById('slidecount').innerHTML= "Image "+(i+1)+" of "+theimage.length;
+
+}
+
+
+function PlaySlide() {
+	if (!window.playing) {
+		PlayingSlide(i+1);
+		if(document.slideshow.play){
+			document.slideshow.play.value="   Stop   ";
+		}
+	}
+	else {
+		playing=clearTimeout(playing);
+		if(document.slideshow.play){
+			document.slideshow.play.value="   Play   ";
+		}
+	}
+	if(document.images.imgPlay){
+		setTimeout('document.images.imgPlay.src="'+imgStop+'"',1);
+		imgStop=document.images.imgPlay.src
+	}
+}
+
+function PlayingSlide(num) {
+	playing=setTimeout('PlayingSlide(i+1);SetSlide(i+1);', playspeed);
+}
+
+function preloadSlide() {
+	for(k=0;k<theimage.length;k++) {
+		theimage[k][0]=new Image().src=theimage[k][0];
+	}
+}
+
+
+</script>
+
+
+
+<form name="slideshow">
+
+<table border="1" cellpadding="2" cellspacing="0" >
+<tr>
+	<td align="center">
+	<script type="text/javascript">
+		document.write('<img name="imgslide" id="imgslide" src="'+theimage[0][0]+'" border="0" width="70%">')
+	</script>
+	</a>
+	</td>
+</tr>
+<tr>
+	<td align="center"><div id="slidecount"></div></td>
+</tr>
+<tr>
+	<td align="center"><div id="slidebox"></div></td>
+</tr>
+<tr>
+	<td align="center">
+		<input type="button" value="<<" onclick="SetSlide(i-1);" title="Previous image">
+		<input type="button" name="play" value="   Play   " onclick="PlaySlide();" title="Autoplay">
+		<input type="button" value=">>" onclick="SetSlide(i+1);" title="Jump to next image">
+		
+	</td>
+</tr>
+</table>
+
+</form>
+</body2>
+<br>
+<br>
+<br>
+
+<p1>
+</p1>
+<br>
+<br>
+<p2>
+</p2>
+</div ID="Centralblock">
+<footer>
+<div ID="IconCred">
+<font size="1">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></font></div>
+</footer>
+</body>
+</Html>

@@ -1,0 +1,103 @@
+#logo{
+position: Absolute;
+  Float: Left;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  Hight: auto;
+  Max-width: 250px;
+  max-hight 250px;
+z-index: 5;
+ }
+@font-face {
+font-family: Lilita One;
+src: url(/Font/LilitaOne-Regular.ttf);
+
+}
+
+body {
+background-image: url("Images/background.png");
+ background-color: #cccccc;
+ no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ 
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+   background-color: #acacac;
+  Border-radius: 30px;
+border: 2px solid;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #777777;
+ Border-radius: 15px;
+border-color: #111;
+overflow: hidden;
+
+}
+
+
+
+h1{
+position: Absolute;
+  Float: Left;
+  display: block;
+  margin-left: 15%;
+  top: -25;
+  margin-right: auto;
+  width: auto;
+  Hight: auto;
+  Max-width: 600px;
+  max-hight auto;
+z-index: 5;
+color: Red;
+font-style: italic;
+font-size: 350%;
+
+}
+h2{ 
+font-size: 350%;
+}
+#Centralblock{
+Background-color:#a8a8a8;
+Text-Align: Center;
+font-family: Lilita One;
+margin: auto;
+  width: 55%;
+  height: auto;
+  border: 5px solid;
+  padding: 5px;
+  Border-radius: 30px;
+}
+#MainImg img{
+width: auto;
+height: auto;
+max-width: 75%;
+Max-hight: 75%;
+border-radius: 20px;
+
+
+}
+p1{
+Text-indent: 50px
